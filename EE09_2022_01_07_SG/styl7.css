@@ -1,0 +1,71 @@
+* {
+    font-family: Helvetica;
+    margin: 0;
+}
+
+.baner,
+.stopka {
+    background-color: rgb(70, 130, 180);
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.główny {
+    background-color: rgb(176, 196, 222);
+    padding: 50px;
+    text-align: center;
+}
+
+.główny img {
+    padding: 3px;
+    border: 1px blue dashed;
+    border-radius: 10px;
+}
+
+.lewy {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 80%;
+    float: left;
+}
+
+.lewy img {
+    height: 40%;
+}
+
+.lewy img:hover {
+    border: 1px white solid;
+}
+
+.lewy h3 {
+    margin: 20px 0px;
+}
+
+.prawy {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 20%;
+    float: right;
+}
+
+.prawy h3 {
+    margin: 20px 0px;
+}
+
+.flex {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.stopka {
+    clear: both;
+}
+
+table {
+    padding: 10px 0px;
+}

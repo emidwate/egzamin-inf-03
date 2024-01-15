@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+.baner1 {
+  background-color: #483D8B;
+  height: 150px;
+  width: 30%;
+  float: left;
+}
+
+.baner2 {
+  background-color: #483D8B;
+  color: white;
+  height: 150px;
+  width: 70%;
+  float: left;
+}
+
+.baner2 h1 {
+  padding: 20px 0px;
+}
+
+.stopka {
+  background-color: #483D8B;
+  color: white;
+  padding: 10px;
+  clear: both;
+}
+.blok {
+  background-color: #AFEEEE;
+  width: 150px;
+  height: 100px;
+  margin: 3px;
+  border: 1px solid black;
+  float: left;
+}
+
+.blok h5 {
+  text-align: center;
+}
+
+.blok p {
+  margin-top: 40px;
+}

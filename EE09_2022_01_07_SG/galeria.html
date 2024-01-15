@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl7.css">
+  <title>Galeria</title>
+</head>
+
+<body>
+  <header class="baner">
+    <h2>Galeria miejsc ciekawych</h2>
+  </header>
+  <div class="główny">
+    <img class="zdjglowne" src="img/lanzarotte.jpg" alt="galeria">
+  </div>
+  <div class="lewy">
+    <h3>Przeglądaj zdjęcia</h3>
+    <img class="zdjmale" src="img/lanzarotte.jpg" alt="lanzarotte">
+    <img class="zdjmale" src="img/pekin.jpg" alt="pekin">
+    <img class="zdjmale" src="img/serengeti.jpg" alt="serengeti">
+    <img class="zdjmale" src="img/wenecja.jpg" alt="wenecja">
+    <img class="zdjmale" src="img/tajlandia.jpg" alt="tajlandia">
+  </div>
+  <div class="prawy">
+    <h3>Obrazy w naszej galerii</h3>
+    <table>
+      <tr>
+        <th>Europa</th>
+        <th>Azja</th>
+        <th>Afryka</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+    </table>
+    <div class="flex">
+      <p>Polub nas</p>
+      <img class="serce" src="img/icon-off.png">
+    </div>
+    <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+  </div>
+  <footer class="stopka">
+    <p>Autor: 0000000000</p>
+  </footer>
+  <script>
+    const glowne = document.querySelector('.zdjglowne');
+    const zdjmale = document.querySelectorAll('.zdjmale');
+    const serceniewlaczone = document.querySelector('.serce');
+
+    let ikonawłączona = false;
+    serceniewlaczone.addEventListener('click', function () {
+      if (ikonawłączona) {
+        serceniewlaczone.src = "img/icon-off.png";
+      } else {
+        serceniewlaczone.src = 'img/icon-on.png';
+      }
+      ikonawłączona = !ikonawłączona;
+    })
+
+    for (let i = 0; i <= zdjmale.length; i++) {
+      zdjmale[i].addEventListener('click', () => {
+        glowne.src = zdjmale[i].src;
+        glowne.alt = zdjmale[i].alt;
+      })
+    }
+
+    // Inne rodzaje pętli za pomocą, których również można było wykonać powyższe zadanie
+    // for (const element of zdjmale) {
+    //     element.addEventListener('click', () => {
+    //     glowne.src = element.src;
+    //     glowne.alt = element.alt;
+    //   });
+    // }
+
+    // zdjmale.forEach(function(elem) {
+    //   elem.addEventListener('click', () => {
+    //     glowne.src = elem.src;
+    //     glowne.alt = elem.alt;
+    //   })
+    // })
+
+  </script>
+</body>
+
+</html>

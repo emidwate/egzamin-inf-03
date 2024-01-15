@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  font-family: Verdana;
+}
+
+.logo {
+  background-color: #FF9F79;
+  height: 270px;
+  width: 30%;
+  float: left;
+}
+
+.lista,
+.formularz {
+  background-color: #FF9F79;
+  color: green;
+  height: 270px;
+  width: 35%;
+  float: left;
+}
+
+.lista ul {
+  padding-top: 15px;
+}
+
+.formularz h2 {
+  padding-top: 15px;
+}
+
+.glowny {
+  background-color: #80CDAC;
+  height: 400px;
+  clear: both;
+  text-align: center;
+}
+
+.glowny h1 {
+  padding: 25px 0;
+}
+
+.glowny p {
+  margin: 5px 0;
+}
+
+.stopka {
+  background-color: #188256;
+  height: 150px;
+  padding: 10px;
+}
+
+.stopka h3 {
+  margin-bottom: 15px;
+}
+
+.stopka p {
+  padding-top: 15px;
+}
+
+a {
+  background-color: green;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid orange;
+}
+
+a:visited {
+  background-color: violet;
+}

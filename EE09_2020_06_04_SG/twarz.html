@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Usługi kosmetyczne</title>
+</head>
+
+<body>
+    <div class="lewy1">
+        <h2>W ofercie</h2>
+        <ul>
+            <li><a href="twarz.html">Zabiegi na twarz</a>
+                <ol>
+                    <li>Pilling</li>
+                    <li>Maska</li>
+                    <li>Regulacja brwi</li>
+                </ol>
+            </li>
+            <li>Masaż</li>
+            <li>Diety oczyszczające</li>
+        </ul>
+        <a href="index.html">Do strony głównej</a>
+    </div>
+    <div class="prawy1">
+        <h1>Salon kosmetyczny</h1>
+    </div>
+    <div class="prawy2">
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <input type="checkbox" name="wybor" value="piling">
+        <label for="piling">Piling</label> <br>
+        <input type="checkbox" name="wybor" value="maska">
+        <label for="maska">Maska</label> <br>
+        <input type="checkbox" name="wybor" value="masaz">
+        <label for="masaz">Masaż twarzy</label> <br>
+        <input type="checkbox" name="wybor" value="brwi">
+        <label for="brwi">Regulacja brwi</label> <br>
+        <button type="button" id="button">Sprawdź cenę</button>
+        <p id="wynik"></p>
+    </div>
+    <div class="lewy2">
+        <img src="obraz1.jpg" alt="Kosmetyczka">
+    </div>
+    <div class="stopka">
+        <p>Autor: 11111111111</p>
+    </div>
+    <script>
+        const button = document.getElementById('button')
+        button.addEventListener('click', () => {
+            const checkboxes = document.getElementsByTagName('input');
+            let koszt = 0;
+            for (let checkbox of checkboxes) {
+                if (checkbox.checked) {
+                    switch (checkbox.value) {
+                        case 'piling':
+                            koszt += 45;
+                            break;
+                        case 'maska':
+                            koszt += 30;
+                            break;
+                        case 'masaz':
+                            koszt += 20;
+                            break;
+                        case 'brwi':
+                            koszt += 5;
+                            break;
+                    }
+                }
+            }
+            if (koszt == 0) {
+                document.getElementById('wynik').innerHTML = ' ';
+            } else {
+                document.getElementById('wynik').innerHTML = `Cena zabiegów: ${koszt}`;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+SELECT nazwa, opis, cena FROM podzespoly WHERE opis LIKE 'Procesor%'; 
+SELECT id, nazwa FROM podzespoly WHERE dostepnosc = 1 AND cena < 400; 
+SELECT nazwa FROM podzespoly INNER JOIN typy on podzespoly.typy_id = typy.id WHERE typy.kategoria = 'Procesor'; 
+ALTER TABLE typy ADD opis TEXT NOT NULL AFTER kategoria; 

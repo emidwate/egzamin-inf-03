@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Stacja paliw</title>
+</head>
+
+<body>
+    <div class="baner">
+        <h1>Całodobowa stacja paliw</h1>
+    </div>
+
+    <div class="menu">
+        <a href="stacja.html"><img src="home.png"></a>
+        <a href="obliczenia.html"><img src="znak.png"></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </div>
+    <div class="lewy">
+        <h2>Orientacyjny koszta paliwa</h2>
+        <label for="rodzaj">Rodzaj paliwa (1-benzyna, 2-olej napędowy)</label> <br>
+        <input type="number" name="rodzaj" id="rodzaj"> <br>
+        <label for="litry">Ile litrów ?</label> <br>
+        <input type="number" name="litry" id="litr"> <br>
+        <input type="submit" value="Oblicz" id="oblicz">
+        <p id="wynik"></p>
+    </div>
+    <div class="prawy">
+        <img src="samochod.png" alt="samochód">
+    </div>
+    <div class="stopka">
+        <p>Stronę opracował: 11111111111</p>
+    </div>
+    <script>
+        const oblicz = document.getElementById('oblicz');
+        const przycisk = document.getElementById('oblicz');
+
+        przycisk.addEventListener('click', () => {
+            const litr = document.getElementById('litr').value;
+            const rodzaj = document.getElementById('rodzaj').value;
+            let cena = 0;
+            if (rodzaj == 1) {
+                cena = litr * 4;
+            } else if (rodzaj == 2) {
+                cena = litr * 3.5;
+            } else {
+                cena = 0;
+            }
+            document.getElementById('wynik').innerHTML = `${cena} zł`;
+        })
+    </script>
+</body>
+
+</html>
