@@ -1,2 +1,2 @@
 # egzamin-inf-03
-Rozwiązania egzaminów zawodowych
+Rozwiązania wybranych egzaminów z części praktycznej kwalifikacji INF 03
