@@ -68,11 +68,7 @@
                     }
                 }
             }
-            if (koszt == 0) {
-                document.getElementById('wynik').innerHTML = ' ';
-            } else {
-                document.getElementById('wynik').innerHTML = `Cena zabiegów: ${koszt}`;
-            }
+            document.getElementById('wynik').innerHTML = koszt == 0 ? ' ' : `Cena zabiegów: ${koszt}`;
         })
     </script>
 </body>
